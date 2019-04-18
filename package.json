@@ -4,6 +4,7 @@
 	"description": "Server Testing Project",
 	"main": "server.js",
 	"scripts": {
+		"server": "nodemon index.js",
 		"test": "cross-env DB_CONNECT=testing jest --watch --verbose"
 	},
 	"jest": {

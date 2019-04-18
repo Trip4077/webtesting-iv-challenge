@@ -15,4 +15,4 @@ server.get('/', async (req, res) => {
 //     res.status(200).json(stock);
 // });
 
-module.exports = server; 
+module.exports = server;
