@@ -6,7 +6,7 @@ const Inventory = require('../inventory/model');
 server.use(express.json());
 
 server.get('/', async (req, res) => {
-    res.status(200).json({ api: 'runnning' });
+    res.status(200).json({ api: 'running' });
 });
 
 server.get('/inventory', async (req, res) => {
