@@ -17,5 +17,5 @@ async function remove(id) {
 }
 
 async function getAll() {
-    return null;
+    return db('inventory');
 }

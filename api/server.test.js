@@ -28,7 +28,7 @@ describe('SERVER', () => {
         it('/inventory should return a JSON packet with status 200, { id, make, year }', async () => {
             const res = await request(server).get('/inventory');
 
-            expect(res.body).toBe(null);
+            expect(res.body).toEqual([]);
         })
     });
 });
