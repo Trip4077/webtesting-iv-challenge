@@ -17,5 +17,5 @@ async function remove(id) {
 }
 
 async function getAll() {
-    return ;
+    return null;
 }
