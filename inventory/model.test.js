@@ -15,7 +15,7 @@ describe('Inventory Model', () => {
 
             expect(inventory.length).toBe(1);
             expect(inventory[0].make).toBe('Jeep');
-        })
+        });
     });
 
 });

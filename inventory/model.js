@@ -7,7 +7,9 @@ module.exports = {
 }
 
 async function insert(vehicle) {
-    return null;       
+    const [ id ] = await db('inventory').insert(vehicle);
+
+    return await db('inventory').where({ id });
 }
 
 async function remove(id) {
@@ -15,5 +17,5 @@ async function remove(id) {
 }
 
 async function getAll() {
-    return null;
+    return ;
 }
