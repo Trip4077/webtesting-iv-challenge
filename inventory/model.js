@@ -13,7 +13,9 @@ async function insert(vehicle) {
 }
 
 async function remove(id) {
-    return null;
+    const success = await db('inventory').where({ id }).del();
+
+    return success;
 }
 
 async function getAll() {

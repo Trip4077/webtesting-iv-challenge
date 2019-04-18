@@ -34,5 +34,28 @@ describe('Inventory Model', () => {
             expect(stock[1].make).toBe('Mazda');
             expect(stock[1].id).toBe(2);
         });
+
+        it('should respond with [] if inventory is empty', async () => {
+            const stock = await Inventory.getAll();
+
+            expect(stock).toEqual([]);
+        });
+    });
+
+    describe('remove()', () => {
+        it('removes selected vehicle by id', async () => {
+            await db('inventory').insert([
+                { make: 'Jeep', year: 1964 },
+                { make: 'Mazda', year: 1999 }
+            ]);
+
+            const deleted = Inventory.remove(1);
+
+            const stock = await Inventory.getAll();
+
+            expect(stock.length).toBe(1);
+            expect(stock[0].make).toBe('Mazda');
+            expect(stock[0].id).toBe(2);
+        })
     });
 });
