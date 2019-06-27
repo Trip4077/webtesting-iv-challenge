@@ -22,7 +22,7 @@ describe("SERVER", () => {
             it('should return the message \'server runnning\'', async () => {
                 const res = await request(server).get('/');
     
-                expect(res.body).toBe({ api: "Server Running" });
+                expect(res.body).toEqual({ api: "Server Running" });
             });
         });
 
