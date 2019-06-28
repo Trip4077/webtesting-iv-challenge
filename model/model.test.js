@@ -1,6 +1,10 @@
 const Inventory = require('./model');
 const db = require('../data/dbConfig');
 
+beforeEach(() => {
+    return db('inventory').truncate();
+});
+
 describe("Inventory Model", () => {
     describe('insert()', () => {
         it('should insert a vehicle into the inventory and return vehicle with id', async () => {

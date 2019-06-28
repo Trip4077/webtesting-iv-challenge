@@ -1,6 +1,12 @@
 const request = require('supertest');
 const server = require('./server');
 
+const db = require('../data/dbConfig');
+
+beforeEach(() => {
+    return db('inventory').truncate();
+});
+
 describe("SERVER", () => {
     describe("Environment", () => {
         it('should set test environment', () => {
